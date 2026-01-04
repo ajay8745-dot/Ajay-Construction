@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Construction | Building Dreams</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* पूरे पेज के लिए स्मूथ लोड एनीमेशन */
+        body {
+            animation: fadeInPage ease 1.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInPage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        /* स्मूथ स्क्रॉलिंग के लिए */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">AJAY <span>CONSTRUCTION</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="quote-btn">Get A Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-down" data-aos-duration="1200">
+            <p>Welcome to Ajay Construction</p>
+            <h1>Building Dreams,<br>Crafting Future</h1>
+            <div class="hero-btns">
+                <a href="service.html" class="btn-primary">Our Services</a>
+                <a href="contact.html" class="btn-outline">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="About Us">
+            </div>
+            <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
+                <h2>About Us</h2>
+                <p>Ajay Construction has been a symbol of quality and trust for over 15 years. We complete every project with dedication and modern techniques.</p>
+                <a href="about.html" class="btn-primary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title" data-aos="zoom-in">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card active" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-building"></i>
+                <h3>Building Construction</h3>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-home"></i>
+                <h3>House Renovation</h3>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>Architecture Design</h3>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-paint-roller"></i>
+                <h3>Interior Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content" data-aos="fade-up">
+            <div class="footer-logo">AJAY <span>CONSTRUCTION</span></div>
+            <p>&copy; 2026 Ajay Construction. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    // AOS Initialize
+    AOS.init({
+        offset: 120, 
+        duration: 800, 
+        easing: 'ease-in-out', 
+        once: false,  // Isse 'true' se 'false' kar diya hai, ab har baar animation hoga
+        mirror: true  // Isse upar scroll karte waqt bhi animation dikhayi dega
+    });
+</script>
+</body>
+</html>
