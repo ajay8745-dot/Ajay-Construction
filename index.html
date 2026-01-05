@@ -1,112 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajay Construction | Building Dreams</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <title>Ajay Construction - Construction Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Construction Company Website Template" name="keywords">
+        <meta content="Construction Company Website Template" name="description">
 
-    <style>
-        /* पूरे पेज के लिए स्मूथ लोड एनीमेशन */
-        body {
-            animation: fadeInPage ease 1.5s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-        @keyframes fadeInPage {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        /* स्मूथ स्क्रॉलिंग के लिए */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-<body>
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">AJAY <span>CONSTRUCTION</span></a>
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <h1>Ajay Construction</h1>
+                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-calendar"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Opening Hour</h3>
+                                            <p>Mon - Sat, 10:00am - 6:00pm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-call"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Call Us</h3>
+                                            <p>+91 9981717330</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-send-mail"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Email Us</h3>
+                                            <p>info@ajayconstruction.in</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="portfolio.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="quote-btn">Get A Quote</a>
-        </nav>
-    </header>
+            <!-- Top Bar End -->
 
-    <section class="hero">
-        <div class="hero-content" data-aos="fade-down" data-aos-duration="1200">
-            <p>Welcome to Ajay Construction</p>
-            <h1>Building Dreams,<br>Crafting Future</h1>
-            <div class="hero-btns">
-                <a href="service.html" class="btn-primary">Our Services</a>
-                <a href="contact.html" class="btn-outline">Get Free Quote</a>
+            <!-- Nav Bar Start -->
+            <div class="nav-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="about.html" class="nav-item nav-link">About</a>
+                                <a href="service.html" class="nav-item nav-link">Service</a>
+                                <a href="portfolio.html" class="nav-item nav-link">Project</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                    </div>
+                                    
+                            <div class="ml-auto">
+                                <a class="btn" href="contact.html">Get A Quote</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Nav Bar End -->
+
+
+            <!-- Carousel Start -->
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/carousel-1.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">We Are Professional</p>
+                            <h1 class="animated fadeInLeft">For Your Dream Project</h1>
+                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/carousel-2.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">Professional Builder</p>
+                            <h1 class="animated fadeInLeft">We Build Your Home</h1>
+                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/carousel-3.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">We Are Trusted</p>
+                            <h1 class="animated fadeInLeft">For Your Dream Home</h1>
+                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- Carousel End -->
+
+
+            <!-- Feature Start-->
+            <div class="feature wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="flaticon-worker"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Expert Worker</h3>
+                                    <p>"Excellence in Every Square Foot."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="flaticon-building"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Quality Work</h3>
+                                    <p>"Quality You Can See, Strength You Can Trust."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Support</h3>
+                                    <p>"Always Connected, Always Ready" "At Ajay Construction, we believe in constant communication.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature End-->
+
+
+            <!-- About Start -->
+            <div class="about wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+                                <img src="img/about.jpg" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="section-header text-left">
+                                <p>Welcome to Ajay Construction</p>
+                                <h2>15 Years Experience</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    "With over 15 years of dedicated experience, Ajay Construction has been a cornerstone in the development of Raipur, Chhattisgarh. We take immense pride in our journey of transforming blueprints into landmarks across the state, ensuring every structure we build reflects our commitment to strength and integrity."
+                                </p>
+                                <p>
+                                    "Our deep understanding of Chhattisgarh’s growing landscape and local architectural needs allows us to deliver projects that are not only modern but also built to last for generations. From residential dreams to commercial hubs, we have successfully shaped the skyline of Raipur with our expert engineering and transparent work ethics."
+
+"At Ajay Construction, we don't just build buildings; we build trust through quality craftsmanship and timely delivery. Your vision, combined with our 15 years of expertise, creates the perfect foundation for excellence."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Fact Start -->
+            <div class="fact">
+                <div class="container-fluid">
+                    <div class="row counters">
+                        <div class="col-md-6 fact-left wow slideInLeft">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-worker"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">50</h2>
+                                        <p>Expert Workers</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-building"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">100</h2>
+                                        <p>Happy Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 fact-right wow slideInRight">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-address"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">110</h2>
+                                        <p>Completed Projects</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-crane"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">15</h2>
+                                        <p>Running Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fact End -->
+
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p>Our Services</p>
+                        <h2>We Provide Services</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/service-1.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Expert Building Construction Content: "With 15 years of excellence in Raipur, we provide end-to-end construction services. From solid foundations to premium finishing, we build residential and commercial structures using high-grade materials and advanced engineering."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Building Construction</h3>
+                                    <a class="btn" href="img/service-1.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/service-2.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Modern House Renovation Content: "Give your old home a brand-new look. Our renovation experts specialize in structural upgrades, layout changes, and modern styling to transform your existing space into a contemporary masterpiece."
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>House Renovation</h3>
+                                    <a class="btn" href="img/service-2.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/service-3.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Innovative Architecture Design Content: "Every great building starts with a great plan. Our architects create smart, space-efficient, and Vastu-compliant designs tailored to your lifestyle and the unique landscape of Chhattisgarh."
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Architecture Design</h3>
+                                    <a class="btn" href="img/service-3.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/service-4.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Luxury Interior Design Content: "We bring elegance to your doorstep. From modular kitchens to aesthetic living rooms, our interior designers blend comfort with style to create beautiful living spaces that reflect your personality."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Interior Design</h3>
+                                    <a class="btn" href="img/service-4.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/service-5.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Reliable Fixing & Support Content: "Ensure the safety of your building with our professional fixing and structural support services. We handle everything from foundation repairs to retrofitting, ensuring your structure remains safe and stable."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Fixing & Support</h3>
+                                    <a class="btn" href="img/service-5.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="img/service-6.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Professional Painting Services Content: "Protect and beautify your walls with our premium painting services. We offer a wide range of weather-resistant exterior paints and luxury interior finishes that provide long-lasting shine and protection."
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Painting</h3>
+                                    <a class="btn" href="img/service-6.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+
+
+            <!-- Video Start -->
+            <div class="video wow fadeIn" data-wow-delay="0.1s">
+                <div class="container">
+                    <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>        
+                            <!-- 16:9 aspect ratio -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video End -->
+
+
+            
+            
+
+            <!-- FAQs Start -->
+            <div class="faqs">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p>Frequently Asked Question</p>
+                        <h2>You May Ask</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="accordion-1">
+                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                            How long does it take to complete a standard house construction?
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            standard residential project in Raipur typically takes 6 to 10 months, depending on the area and design complexity. We always provide a clear timeline before starting.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
+                                            Do you provide a fixed budget estimate before starting the work?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            "Yes, we provide a detailed cost estimation based on your requirements. Our 15 years of experience helps us ensure there are no hidden costs during the project.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
+                                            What kind of building materials do you use?
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            We use only premium, certified materials (ISI marked) like high-grade steel and cement. Quality is our foundation, and we never compromise on structural integrity.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.4s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
+                                            Do you take projects outside of Raipur city?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                           "Yes, we handle construction and renovation projects across Raipur and nearby regions in Chhattisgarh, including Bhilai and Durg."
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.5s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
+                                            Can you help with building maps and government approvals?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            "Absolutely. We assist our clients with architectural planning and navigating the necessary local authority approvals to make the process hassle-free for you."
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="accordion-2">
+                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
+                                            Do you provide Vastu-compliant house designs?
+                                        </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                            "Yes, all our architectural designs are created keeping Vastu Shastra in mind. We ensure that your home has the perfect balance of positive energy, proper ventilation, and modern space management."
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.2s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
+                                            What are your payment stages for a construction project?
+                                        </a>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                           "Our payments are milestone-based. You don't have to pay everything upfront; instead, payments are divided into stages like foundation, slab casting, brickwork, and finishing."
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
+                                            Is it more expensive to renovate an old house than building a new one?
+                                        </a>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                            "Not necessarily. Our experts evaluate the structural strength of your old building in Raipur and suggest the most cost-effective renovation plan to give it a modern look within your budget."
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.4s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
+                                            Do you provide any warranty or support after the project is completed?
+                                        </a>
+                                    </div>
+                                    <div id="collapseNine" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                            "Yes, we believe in long-term relationships. We provide a structural warranty and post-construction support to ensure that you are completely satisfied with your new home."
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.5s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen">
+                                            Can you change the interior layout of my existing house without breaking everything?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTen" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                            Yes, our smart interior design and fixing services allow us to optimize your current space with minimal demolition, giving your home a fresh and premium look."
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQs End -->
+
+
+            
+
+
+            <div class="process wow fadeInUp" data-wow-delay="0.1s" style="padding: 90px 0;">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Our Strategy</p>
+            <h2>How We Build Your Dreams</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="process-item" style="text-align: center; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
+                    <div class="process-img" style="margin-bottom: 20px;">
+                        <img src="img/service-3.jpg" alt="Planning" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="process-text">
+                        <h3 style="color: #030f27;">1. Planning & Design</h3>
+                        <p>We create Vastu-compliant maps and architectural designs tailored for Raipur homes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="process-item" style="text-align: center; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
+                    <div class="process-img" style="margin-bottom: 20px;">
+                        <img src="img/service-1.jpg" alt="Construction" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="process-text">
+                        <h3 style="color: #030f27;">2. Quality Execution</h3>
+                        <p>Our expert team uses premium materials to ensure the structural strength of your building.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="process-item" style="text-align: center; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
+                    <div class="process-img" style="margin-bottom: 20px;">
+                        <img src="img/service-2.jpg" alt="Handover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="process-text">
+                        <h3 style="color: #030f27;">3. Final Handover</h3>
+                        <p>After a rigorous quality check, we hand over the keys to your new home on time.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section class="about">
-        <div class="about-container">
-            <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="About Us">
+
+            <!-- Footer Start -->
+            <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-contact">
+                                <h2>Office Contact</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>Raipur Near Bhatagano Chowk Chhattisgarh 492001</p>
+                                <p><i class="fa fa-phone-alt"></i>+91 9981717330</p>
+                                <p><i class="fa fa-envelope"></i>info@ajayconstruction.in</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Services Areas</h2>
+                                <a href="">Building Construction</a>
+                                <a href="">House Renovation</a>
+                                <a href="">Architecture Design</a>
+                                <a href="">Interior Design</a>
+                                <a href="">Painting</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Pages</h2>
+                                <a href="">About Us</a>
+                                <a href="">Contact Us</a>
+                                <a href="">Our Team</a>
+                                <a href="">Projects</a>
+                                <a href="">Testimonial</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="newsletter">
+                                
+                                <div class="form">
+                                    <input class="form-control" placeholder="Email here">
+                                    <button class="btn">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="#">ajay construction</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="https://htmlcodex.com">Ajay</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
-                <h2>About Us</h2>
-                <p>Ajay Construction has been a symbol of quality and trust for over 15 years. We complete every project with dedication and modern techniques.</p>
-                <a href="about.html" class="btn-primary">Read More</a>
-            </div>
+            <!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
-    </section>
 
-    <section class="services">
-        <h2 class="section-title" data-aos="zoom-in">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card active" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-building"></i>
-                <h3>Building Construction</h3>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-home"></i>
-                <h3>House Renovation</h3>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-pencil-ruler"></i>
-                <h3>Architecture Design</h3>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-paint-roller"></i>
-                <h3>Interior Design</h3>
-            </div>
-        </div>
-    </section>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
 
-    <footer>
-        <div class="footer-content" data-aos="fade-up">
-            <div class="footer-logo">AJAY <span>CONSTRUCTION</span></div>
-            <p>&copy; 2026 Ajay Construction. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    // AOS Initialize
-    AOS.init({
-        offset: 120, 
-        duration: 800, 
-        easing: 'ease-in-out', 
-        once: false,  // Isse 'true' se 'false' kar diya hai, ab har baar animation hoga
-        mirror: true  // Isse upar scroll karte waqt bhi animation dikhayi dega
-    });
-</script>
-</body>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
