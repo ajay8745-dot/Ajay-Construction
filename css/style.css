@@ -1,4 +1,11 @@
-/* Basic Reset */
+/* ==========================================================================
+   1. GLOBAL RESET & VARIABLES (Correct Hierarchy)
+   ========================================================================== */
+:root {
+    --primary-cyan: #00bcd4;
+    --dark-blue: #030f27;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,37 +13,69 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #f8f9fa;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navbar Styling */
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    width: 100%;
+    animation: fadeInAnimation ease 1.5s forwards;
+}
+
+.logo-text {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #030f27; /* गहरा रंग */
+}
+
+.logo-text span {
+    color: var(--primary-cyan); /* कंस्ट्रक्शन शब्द का रंग अलग करने के लिए */
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR (Styling Protected)
+   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1000;
+    margin: 0 auto;
+}
+/* --- Inner Pages Navbar Spacing --- */
+.inner-page .navbar {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: clamp(20px, 4vw, 24px);
     font-weight: 800;
-    color: #030f27;
+    color: var(--dark-blue);
+    white-space: nowrap;
+    text-decoration: none;
 }
 
-.logo span {
-    color: #00bcd4;
-}
+.logo span { color: var(--primary-cyan); }
 
 .nav-links {
     display: flex;
     list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -44,284 +83,233 @@ body {
     color: #333;
     font-weight: 500;
     transition: 0.3s;
+    padding: 8px 12px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
 }
 
-.nav-links a:hover {
-    color: #00bcd4;
+.nav-links a:hover, .nav-links a:active {
+    color: var(--primary-cyan);
+    border-bottom: 2px solid var(--primary-cyan);
 }
 
 .quote-btn {
+    display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #00bcd4;
-    color: #00bcd4;
+    border: 2px solid var(--primary-cyan);
+    color: var(--primary-cyan);
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
-}
-
-/* Hero Section Styling */
-.hero {
-    height: 80vh;
-    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.btn-primary {
-    background: #00bcd4;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    display: inline-block;
-}
-
-.btn-outline {
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-/* About Section Styling */
-.about {
-    padding: 100px 8%;
-    background: #fff;
-}
-
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 20px 20px 0px #00bcd4;
-}
-
-/* Services Section Styling */
-.services {
-    padding: 80px 8%;
+    white-space: nowrap;
+    transition: 0.3s ease;
     text-align: center;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+.quote-btn:hover {
+    background-color: var(--primary-cyan);
+    color: #fff;
 }
 
-.service-card {
+/* ==========================================================================
+   3. HERO & PAGE HEADERS (Background Fixed preserved)
+   ========================================================================== */
+.hero {
+    min-height: 80vh;
+    height: auto;
+    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)), 
+                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: #fff;
+}
+
+.hero-content { max-width: 800px; width: 100%; }
+.hero-content h1 { font-size: clamp(30px, 6vw, 50px); line-height: 1.2; margin-bottom: 20px; }
+
+.hero-btns { display: flex; flex-wrap: wrap; gap: 15px; }
+
+.btn-primary, .btn-outline {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-primary { background: var(--primary-cyan); color: #fff; border: 2px solid var(--primary-cyan); }
+.btn-outline { border: 2px solid #fff; color: #fff; }
+
+.page-header-contact, .page-header-services, .page-header-about, .page-header-projects {
+    padding: clamp(60px, 12vw, 100px) 0;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+/* ==========================================================================
+   4. SECTIONS (About, Services, Portfolio)
+   ========================================================================== */
+.about { padding: 60px 8%; max-width: 1400px; margin: 0 auto; background: #fff; overflow: hidden; }
+.about-container { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.about-image img { width: 100%; max-width: 500px; height: auto; border-radius: 10px; box-shadow: 10px 10px 0px var(--primary-cyan); }
+
+.services { padding: 60px 8%; text-align: center; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+
+.service-card, .service-item {
     background: #fff;
-    padding: 40px 20px;
+    padding: 40px 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.service-card i {
-    font-size: 40px;
-    color: #00bcd4;
-    margin-bottom: 15px;
-}
-
-/* Footer Styling */
-footer {
-    background: #030f27;
-    color: #fff;
-    padding: 40px 8%;
-    text-align: center;
-}
-
-/* --- Contact Page Styles --- */
-/* Contact Page Custom Theme */
-:root {
-    --primary-cyan: #00bcd4;
-    --dark-blue: #030f27;
-}
-
-.text-cyan { color: var(--primary-cyan); }
-.bg-cyan { background-color: var(--primary-cyan); }
-
-.logo-text { font-weight: 800; color: var(--dark-blue); }
-.logo-text span { color: var(--primary-cyan); }
-
-.top-bar-custom {
-    border-bottom: 1px solid #eee;
-}
-
-.top-info i {
-    color: var(--primary-cyan);
-}
-
-.btn-cyan {
-    background-color: var(--primary-cyan);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 25px;
-}
-
-.btn-cyan:hover {
-    background-color: #008ba3;
-    color: white;
-}
-
-.page-header-contact {
-    padding: 100px 0;
-    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)), url('https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-}
-
-.contact-info-card {
-    background: var(--dark-blue);
-    color: white;
-    border-radius: 10px;
-}
-
-.custom-input {
-    border: 1px solid #ddd;
-    padding: 12px;
-}
-
-.custom-input:focus {
-    border-color: var(--primary-cyan);
-    box-shadow: none;
-}
-
-/* Services Page Custom Theme */
-.page-header-services {
-    padding: 100px 0;
-    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-}
-
-.service-item {
-    transition: 0.5s;
-    border-bottom: 5px solid transparent;
-    border-radius: 10px;
-}
-
-.service-item:hover {
-    margin-top: -10px;
-    border-bottom: 5px solid var(--primary-cyan);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-}
-
-.service-item i {
-    transition: 0.5s;
-}
-
-.service-item:hover i {
-    transform: rotateY(360deg);
-}
-
-/* About Page Custom Theme */
-.page-header-about {
-    padding: 100px 0;
-    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)), url('https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-}
-
-.text-cyan {
-    color: var(--primary-cyan) !important;
-}
-
-.fa-check-circle, .fa-users, .fa-clock, .fa-money-bill-wave {
-    color: var(--primary-cyan);
-}
-
-/* Projects Page Custom Theme */
-.page-header-projects {
-    padding: 100px 0;
-    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-}
-
-.portfolio-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-img img {
-    transition: 0.5s;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.portfolio-item:hover .portfolio-img img {
-    transform: scale(1.1);
-}
-
-.portfolio-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(3, 15, 39, 0.7);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    opacity: 0;
-    transition: 0.5s;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
+.service-card i, .service-item i { font-size: 45px; color: var(--primary-cyan); margin-bottom: 20px; transition: 0.5s; }
+.service-item:hover i { transform: rotateY(360deg); }
 
+/* Portfolio / Projects */
 .portfolio-item {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     border-radius: 10px;
     overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+    height: 100%;
+    position: relative;
 }
 
-/* Page load animation */
-body {
-    animation: fadeInAnimation ease 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.portfolio-img { position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
+.portfolio-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.portfolio-overlay {
+    position: absolute; inset: 0; background: rgba(3, 15, 39, 0.8);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    opacity: 0; transition: 0.4s ease; padding: 20px; text-align: center; color: #fff;
 }
 
+/* ==========================================================================
+   5. SLIDER (Pure Optimized Styles)
+   ========================================================================== */
+#ajaySlider .carousel-item { height: 550px; background-color: #000; overflow: hidden; }
+#ajaySlider .carousel-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 5s linear; }
+#ajaySlider .carousel-item.active img { transform: scale(1.1); }
+
+.carousel-fade .carousel-item { opacity: 0; transition: opacity 1.5s ease-in-out !important; }
+.carousel-fade .carousel-item.active { opacity: 1; }
+
+.carousel-caption {
+    background: rgba(3, 15, 39, 0.6); 
+    padding: 30px;
+    border-radius: 15px;
+    bottom: 20%;
+    border-left: 5px solid var(--primary-cyan);
+}
+
+/* ==========================================================================
+   6. CONTACT & FOOTER (Updated with Full Width Copyright)
+   ========================================================================== */
+.custom-input { border: 1px solid #ddd; padding: 12px; width: 100%; font-size: 16px; border-radius: 5px; transition: 0.3s; }
+.contact-info-card { background: var(--dark-blue); color: white; border-radius: 10px; padding: 30px; height: 100%; }
+
+/* Footer Main */
+footer { 
+    background: var(--dark-blue); 
+    color: #fff; 
+    padding: clamp(30px, 5vh, 60px) 0; /* साइड पैडिंग 0 की ताकि नीचे वाला हिस्सा फुल दिखे */
+    text-align: center; 
+    width: 100%;
+}
+.footer-logo { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 0 8%; }
+.footer-logo img { max-width: 60px; height: auto; transition: 0.3s; }
+.footer-text { font-size: 14px; opacity: 0.8; line-height: 1.6; padding: 0 8%; }
+
+/* --- Copyright Area (Full Width Fix) --- */
+.copyright-area {
+    background: #020917; /* डार्क ब्लैक */
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* --- Portfolio Header Text Fix --- */
+.page-header-projects h1 {
+    color: #ffffff !important; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* डार्क शैडो ताकि वाइट टेक्स्ट साफ़ दिखे */
+}
+
+/* ==========================================================================
+   7. ANIMATIONS & HOVERS
+   ========================================================================== */
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.btn-cyan, .service-card, .portfolio-item {
-    transition: all 0.3s ease-in-out;
-}
-/* Button animation */
-.btn-cyan:hover {
-    transform: translateY(-5px); /* Button thoda upar uthega */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.service-card:hover, .service-item:hover {
+    transform: scale(1.03) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    z-index: 1;
+    position: relative;
 }
 
-.service-card:hover {
-    transform: scale(1.05); /* Card thoda bada ho jayega */
+.portfolio-item:hover .portfolio-img img { transform: scale(1.1); }
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+.btn-cyan:hover, .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3); filter: brightness(1.1); }
+
+/* ==========================================================================
+   7.1 INNER PAGE BUTTON SPECIALS (Adjusted for Hierarchy)
+   ========================================================================== */
+
+/* सिर्फ Index के अलावा बाकी पेजों के लिए */
+.inner-page .quote-btn, 
+.inner-page .btn-cyan {
+    background-color: var(--primary-cyan) !important; /* या अपना मनपसंद कलर कोड */
+    color: #ffffff !important;
+    padding: 10px 25px !important;
+    border-radius: 5px;
+    border: none !important;
+    text-decoration: none !important;
+}
+
+.inner-page .quote-btn:hover, 
+.inner-page .btn-cyan:hover {
+    background-color: #008ba3 !important; /* होवर पर डार्क */
+    color: #ffffff !important;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   8. MASTER MEDIA QUERIES (Combined & Protected)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .hero { text-align: center; justify-content: center; padding: 40px 5%; }
+    .hero-btns { justify-content: center; }
+    .about-container { text-align: center; gap: 30px; }
+    .about-image img { max-width: 90%; box-shadow: 10px 10px 0px var(--primary-cyan); }
+    #ajaySlider .carousel-item { height: 350px; }
+    .carousel-caption h2 { font-size: 24px; }
+    .portfolio-img { aspect-ratio: 16 / 9; }
+    .btn-cyan { width: 100%; text-align: center; }
+    .fa-check-circle, .fa-users, .fa-clock, .fa-money-bill-wave { font-size: 30px; }
+}
+
+@media (max-width: 480px) {
+    .quote-btn, .btn-primary, .btn-outline { display: block; width: 100%; margin-top: 10px; margin-right: 0; }
+    .services-grid { grid-template-columns: 1fr; gap: 20px; }
+    .service-card { padding: 30px 15px; }
+    footer { padding: 40px 5%; }
 }
