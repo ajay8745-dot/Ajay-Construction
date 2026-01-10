@@ -10,9 +10,41 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+    /* Sirf service page ke boxes ko ek barabar karne ke liye */
+    .service-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Sabhi boxes ki height barabar karega */
+        min-height: 350px; /* Aap apni pasand ke hisaab se height set kar sakte hain */
+    }
+
+    .service-item p {
+        flex-grow: 1; /* Text kam ho ya zyada, box ka size nahi badlega */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-item a {
+        margin-top: auto; /* Button hamesha niche rahega */
+    }
+
+    /* Row ko stretch karne ke liye */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .col-lg-4 {
+        display: flex;
+        margin-bottom: 30px; /* Boxes ke beech niche se gap */
+    }
+</style>
 </head>
 
 <body>
+    <body class="inner-page">
     <div class="wrapper">
         <div class="top-bar-custom d-none d-lg-block">
             <div class="container-fluid">
@@ -126,5 +158,16 @@
             mirror: true
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/data/projects-data.js"></script>
+<script src="js/main.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000 });
+</script>
 </body>
 </html>
