@@ -313,3 +313,39 @@ footer {
     .service-card { padding: 30px 15px; }
     footer { padding: 40px 5%; }
 }
+
+/* ==========================================================================
+   9. SOCIAL MEDIA ICONS Facebook | Instagram | WhatsApp
+   ========================================================================== */
+
+   .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background: #00d4ff;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-8px) scale(1.15);
+    box-shadow: 0 10px 25px rgba(0,212,255,0.5);
+}
+
+.social-icons .fa-facebook-f:hover {
+    color: #1877f2;
+}
+
+.social-icons .fa-instagram:hover {
+    color: #e1306c;
+}
+
+.social-icons .fa-whatsapp:hover {
+    color: #25d366;
+}
