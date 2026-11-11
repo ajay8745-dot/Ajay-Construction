@@ -81,6 +81,35 @@ const myProjects = [
         img: "img/project8.jpg", // Video load hone se pehle ye photo dikhegi
         isVideo: false 
     },
+    { 
+        title: "24x40 Feet East Face 3bhk G.Floor", 
+        cat: "House Plan", 
+        img: "img/24x40_Plan-1_G.Floor.png"   
+    },
+
+    { 
+        title: "22x40 Feet South Face 1bhk+1Shop G.Floor", 
+        cat: "House Plan", 
+        img: "img/22x40_Plan-3_G.Floor.png"   
+    },
+
+    { 
+        title: "22x40 Feet South Face 2bhk G.Floor",
+        cat: "House Plan", 
+        img: "img/22x40_Plan-3.2_G.Floor.png"   
+    },
+
+    { 
+        title: "20x61 Feet North Face 2bhk F.Floor", 
+        cat: "House Plan", 
+        img: "img/20x61_Plan-2_FFloor.png"   
+    },
+
+    { 
+        title: "15x60.5 Feet North Face 2bhk F.Floor", 
+        cat: "House Plan", 
+        img: "img/15x60.5_Plan-2_F.Floor.png"   
+    },    
 ];
 
 const sliderData = [
